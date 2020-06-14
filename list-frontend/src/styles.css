@@ -1,0 +1,118 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('./lukas-blazek-EWDvHNNfUmQ-unsplash.jpg');
+    background-size: cover;
+  }
+  
+  header {
+    background-color: #5eb3e4;
+    margin: 0 auto;
+    height: 50px;
+  }
+  
+  header h2 {
+    padding: 10px;
+    margin: 0;
+  }
+  
+  main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-gap: 20px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
+  
+  div.list {
+    background-color: #88d2df;
+    height: auto;
+    width: 300px;
+    box-shadow: 10px 10px grey;
+    padding: 10px;
+    margin-left: 20px;
+    border-radius: 10px;
+  }
+
+  div.list.doing {
+    background-color: #ebe839;
+    height: auto;
+    width: 300px;
+    box-shadow: 10px 10px grey;
+    padding: 10px;
+    margin-left: 20px;
+    border-radius: 10px;
+  }
+
+  div.list.done {
+    background-color: rgb(124, 235, 110);
+    height: auto;
+    width: 270px;
+    box-shadow: 10px 10px grey;
+    padding: 10px;
+    margin-left: 20px;
+    border-radius: 10px;
+  }
+  
+  p {
+    font-size: 1.5em;
+    color: black;
+    font-family: Helvetica;
+  }
+  
+  li {
+    font-size: 1.05em;
+    list-style: none;
+    padding-right: 20px;
+  }
+  
+  button {
+    font-size: .75em;
+    color: #fff;
+    background-color: rgb(54, 167, 219);
+    border-radius: 10px;
+  }
+  
+  button.delete {
+    float: right;
+    background-color: #E1332D;
+  }
+
+  button.doing {
+    float: right;
+    color: rgb(80, 78, 78);
+    background-color: #ebe839;
+  }
+
+  button.done {
+    float: right;
+    color: rgb(80, 78, 78);
+    background-color: rgb(81, 236, 60);
+  }
+  
+  @media only screen and (min-width: 500px) {
+    main {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  @media only screen and (min-width: 850px) {
+    main {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+  
+  span.createlist {
+    margin-top:50px; 
+    margin-bottom: 30px;
+    padding-left:10px; 
+    display:inline-block;
+  }
+
+  input.submit {
+    font-size: .75em;
+    color: #fff;
+    background-color: rgb(54, 167, 219);
+    border-radius: 10px;
+  }
