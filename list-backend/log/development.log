@@ -37541,3 +37541,5 @@ Completed 200 OK in 77ms (Views: 57.1ms | ActiveRecord: 3.0ms | Allocations: 208
   [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."list_id" = ? LIMIT ?[0m  [["list_id", 1], ["LIMIT", 11]]
   [1m[36mList Load (0.4ms)[0m  [1m[34mSELECT "lists".* FROM "lists" ORDER BY "lists"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
   [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "items" WHERE "items"."list_id" = ?[0m  [["list_id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  [1m[36mList Load (0.4ms)[0m  [1m[34mSELECT "lists".* FROM "lists" ORDER BY "lists"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
