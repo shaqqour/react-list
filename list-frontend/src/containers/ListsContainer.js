@@ -12,6 +12,18 @@ class ListsContainer extends Component {
         )
     }
 
+    componentDidMount() {
+        fetch("http://localhost:3000/lists")
+        .then(response => response.json())
+        .then(jsonObject => this.addLists(jsonObject.data))
+    }
+
+    addLists(lists) {
+        lists.forEach(list => {
+            this.props.addList(list)
+        });
+    }
+
 }
 
 const mapStateToProps = (state) => {
