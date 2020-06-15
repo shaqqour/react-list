@@ -14,10 +14,16 @@ class ListsContainer extends Component {
 
 }
 
+const mapStateToProps = (state) => {
+    return {
+        lists: state.lists
+    }
+}
+
 const mapDispatchToProps = (dispatch) => {
     return {
         addList: list => dispatch({type: "ADD_LIST", list})
     }
 }
 
-export default connect(null, mapDispatchToProps)(ListsContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(ListsContainer);
