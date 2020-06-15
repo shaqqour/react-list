@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 
-class Lists extends Component {
+const Lists = (porps) => {
 
-    render() {
-        return null
-    }
+    return (
+        <div>
+            LISTS
+        </div>
+    )
 
 }
+
+export default Lists
