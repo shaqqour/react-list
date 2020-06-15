@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import ListInput from "../components/lists/ListInput"
 import { connect } from "react-redux"
+import Lists from "../components/lists/Lists"
 
 class ListsContainer extends Component {
 
@@ -8,6 +9,7 @@ class ListsContainer extends Component {
         return (
             <div>
                 <ListInput/>
+                <Lists lists = {this.props.lists} />
             </div>
         )
     }
