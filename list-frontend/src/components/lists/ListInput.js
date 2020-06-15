@@ -6,12 +6,19 @@ class ListInput extends Component {
         name: ""
     }
 
+    handleChange = (event) => {
+        event.preventDefault();
+        this.setState({
+            name: event.target.value
+        })
+    }
+
     render() {
         return (
             <div>
                 <span className="createlist">Create your lists here
                     <form>
-                        <input type="text" value={this.state.name} />
+                        <input type="text" value={this.state.name} onChange={this.handleChange}/>
                         <input className="submit" type="submit" value="Create List"/>
                     </form>
                 </span>
