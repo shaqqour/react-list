@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import ListInput from "../components/lists/ListInput"
 import { connect } from "react-redux"
 import Lists from "../components/lists/Lists"
-import { addList } from "../actions/lists"
+import { addList, fetchLists } from "../actions/lists"
 
 class ListsContainer extends Component {
 
@@ -16,15 +16,7 @@ class ListsContainer extends Component {
     }
 
     componentDidMount() {
-        fetch("http://localhost:3000/lists")
-        .then(response => response.json())
-        .then(jsonObject => this.addLists(jsonObject.data))
-    }
-
-    addLists(lists) {
-        lists.forEach(list => {
-            this.props.addList(list)
-        });
+        this.props.fetchLists();
     }
 
 }
@@ -37,6 +29,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
+        fetchLists: () => dispatch(fetchLists()),
         addList: list => dispatch(addList(list))
     }
 }

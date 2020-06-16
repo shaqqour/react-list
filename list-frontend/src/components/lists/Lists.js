@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Lists = (porps) => {
+const Lists = ({lists}) => {
 
     return (
         <div>
-            LISTS
+            {console.log(lists)}
         </div>
     )
 
