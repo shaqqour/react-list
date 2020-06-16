@@ -10,7 +10,7 @@ class ListsContainer extends Component {
         return (
             <div>
                 <ListInput/>
-                <Lists lists = {this.props.lists} />
+                <Lists lists = {this.props.lists.lists} />
             </div>
         )
     }

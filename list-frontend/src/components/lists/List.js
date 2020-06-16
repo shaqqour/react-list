@@ -1,10 +1,15 @@
 import React from 'react';
 
-const List = (props) => {
+const List = ({list}) => {
     return (
-        <div>
-            List
-        </div>
+        <main>
+            <div className="list" id={list.id}>
+            </div>
+            <div className="list doing" id={list.id + "doing"}>
+            </div>
+            <div className="list done" id={list.id + "done"}>
+            </div>
+        </main>
     )
 }
 

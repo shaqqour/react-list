@@ -5,7 +5,9 @@ const Lists = ({lists}) => {
 
     return (
         <div>
-            <List />
+            {
+                lists.map(list => <List key={list.id} list={list.attributes} />)
+            }
         </div>
     )
 
