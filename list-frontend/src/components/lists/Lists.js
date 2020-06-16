@@ -1,10 +1,11 @@
 import React from 'react';
+import List from './List';
 
 const Lists = ({lists}) => {
 
     return (
         <div>
-            {console.log(lists)}
+            <List />
         </div>
     )
 
