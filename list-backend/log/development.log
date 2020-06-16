@@ -38808,3 +38808,140 @@ Processing by ListsController#index as */*
 Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.5ms | Allocations: 4029)
 
 
+Started GET "/lists" for ::1 at 2020-06-15 18:57:21 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ListsController#index as */*
+  [1m[36mList Load (0.3ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/controllers/lists_controller.rb:5:in `index'
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."list_id" = ?[0m  [["list_id", 1]]
+  ↳ app/controllers/lists_controller.rb:5:in `index'
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."list_id" = ?[0m  [["list_id", 79]]
+  ↳ app/controllers/lists_controller.rb:5:in `index'
+Completed 200 OK in 17ms (Views: 15.4ms | ActiveRecord: 0.9ms | Allocations: 4066)
+
+
+Started GET "/lists" for ::1 at 2020-06-15 18:57:39 -0700
+Processing by ListsController#index as */*
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/controllers/lists_controller.rb:5:in `index'
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."list_id" = ?[0m  [["list_id", 1]]
+  ↳ app/controllers/lists_controller.rb:5:in `index'
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."list_id" = ?[0m  [["list_id", 79]]
+  ↳ app/controllers/lists_controller.rb:5:in `index'
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.5ms | Allocations: 4029)
+
+
+Started GET "/lists" for ::1 at 2020-06-16 08:36:19 -0700
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ListsController#index as */*
+  [1m[36mList Load (0.4ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/controllers/lists_controller.rb:5:in `index'
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."list_id" = ?[0m  [["list_id", 1]]
+  ↳ app/controllers/lists_controller.rb:5:in `index'
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."list_id" = ?[0m  [["list_id", 79]]
+  ↳ app/controllers/lists_controller.rb:5:in `index'
+Completed 200 OK in 49ms (Views: 40.0ms | ActiveRecord: 2.8ms | Allocations: 20718)
+
+
+Started GET "/lists" for ::1 at 2020-06-16 08:59:03 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ListsController#index as */*
+  [1m[36mList Load (0.4ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/controllers/lists_controller.rb:5:in `index'
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."list_id" = ?[0m  [["list_id", 1]]
+  ↳ app/controllers/lists_controller.rb:5:in `index'
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."list_id" = ?[0m  [["list_id", 79]]
+  ↳ app/controllers/lists_controller.rb:5:in `index'
+Completed 200 OK in 26ms (Views: 25.1ms | ActiveRecord: 0.8ms | Allocations: 4078)
+
+
+Started GET "/lists" for ::1 at 2020-06-16 08:59:14 -0700
+Processing by ListsController#index as */*
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/controllers/lists_controller.rb:5:in `index'
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."list_id" = ?[0m  [["list_id", 1]]
+  ↳ app/controllers/lists_controller.rb:5:in `index'
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."list_id" = ?[0m  [["list_id", 79]]
+  ↳ app/controllers/lists_controller.rb:5:in `index'
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.5ms | Allocations: 4047)
+
+
+Started GET "/lists" for ::1 at 2020-06-16 09:43:13 -0700
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ListsController#index as */*
+  [1m[36mList Load (0.3ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/controllers/lists_controller.rb:5:in `index'
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."list_id" = ?[0m  [["list_id", 1]]
+  ↳ app/controllers/lists_controller.rb:5:in `index'
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."list_id" = ?[0m  [["list_id", 79]]
+  ↳ app/controllers/lists_controller.rb:5:in `index'
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.8ms | Allocations: 4079)
+
+
+Started GET "/lists" for ::1 at 2020-06-16 09:43:15 -0700
+Processing by ListsController#index as */*
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/controllers/lists_controller.rb:5:in `index'
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."list_id" = ?[0m  [["list_id", 1]]
+  ↳ app/controllers/lists_controller.rb:5:in `index'
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."list_id" = ?[0m  [["list_id", 79]]
+  ↳ app/controllers/lists_controller.rb:5:in `index'
+Completed 200 OK in 18ms (Views: 16.5ms | ActiveRecord: 0.9ms | Allocations: 4029)
+
+
+Started GET "/lists" for ::1 at 2020-06-16 09:43:42 -0700
+Processing by ListsController#index as */*
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/controllers/lists_controller.rb:5:in `index'
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."list_id" = ?[0m  [["list_id", 1]]
+  ↳ app/controllers/lists_controller.rb:5:in `index'
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."list_id" = ?[0m  [["list_id", 79]]
+  ↳ app/controllers/lists_controller.rb:5:in `index'
+Completed 200 OK in 16ms (Views: 14.7ms | ActiveRecord: 0.6ms | Allocations: 4029)
+
+
+Started GET "/lists" for ::1 at 2020-06-16 09:44:06 -0700
+Processing by ListsController#index as */*
+  [1m[36mList Load (0.3ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/controllers/lists_controller.rb:5:in `index'
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."list_id" = ?[0m  [["list_id", 1]]
+  ↳ app/controllers/lists_controller.rb:5:in `index'
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."list_id" = ?[0m  [["list_id", 79]]
+  ↳ app/controllers/lists_controller.rb:5:in `index'
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.7ms | Allocations: 4029)
+
+
+Started GET "/lists" for ::1 at 2020-06-16 09:45:16 -0700
+Processing by ListsController#index as */*
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/controllers/lists_controller.rb:5:in `index'
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."list_id" = ?[0m  [["list_id", 1]]
+  ↳ app/controllers/lists_controller.rb:5:in `index'
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."list_id" = ?[0m  [["list_id", 79]]
+  ↳ app/controllers/lists_controller.rb:5:in `index'
+Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 0.6ms | Allocations: 4030)
+
+
+Started GET "/lists" for ::1 at 2020-06-16 09:45:55 -0700
+Processing by ListsController#index as */*
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/controllers/lists_controller.rb:5:in `index'
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."list_id" = ?[0m  [["list_id", 1]]
+  ↳ app/controllers/lists_controller.rb:5:in `index'
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."list_id" = ?[0m  [["list_id", 79]]
+  ↳ app/controllers/lists_controller.rb:5:in `index'
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.6ms | Allocations: 4047)
+
+
+Started GET "/lists" for ::1 at 2020-06-16 09:46:44 -0700
+Processing by ListsController#index as */*
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/controllers/lists_controller.rb:5:in `index'
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."list_id" = ?[0m  [["list_id", 1]]
+  ↳ app/controllers/lists_controller.rb:5:in `index'
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."list_id" = ?[0m  [["list_id", 79]]
+  ↳ app/controllers/lists_controller.rb:5:in `index'
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.5ms | Allocations: 4029)
+
+
