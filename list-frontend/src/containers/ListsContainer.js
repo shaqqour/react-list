@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import ListInput from "../components/lists/ListInput"
 import { connect } from "react-redux"
 import Lists from "../components/lists/Lists"
+import { addList } from "../actions/lists"
 
 class ListsContainer extends Component {
 
@@ -36,7 +37,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        addList: list => dispatch({type: "ADD_LIST", list})
+        addList: list => dispatch(addList(list))
     }
 }
 
