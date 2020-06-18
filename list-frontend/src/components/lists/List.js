@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ItemsContainer from '../../containers/ItemsContainer';
 
 class List extends Component {
 
@@ -8,9 +9,11 @@ class List extends Component {
 
         return (
             <main>
-                <div className="list" id={list.id}></div>
-                <div className="list doing" id={list.id + "doing"}></div>
-                <div className="list done" id={list.id + "done"}></div>
+                <div className="list" id={list.id}>
+                    <button className="delete">Delete List</button>
+                    <p>{list.name} (to do)</p>
+                    <ItemsContainer list={list}/>
+                </div>
             </main>
         )
 
