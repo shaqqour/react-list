@@ -20,6 +20,10 @@ class List extends Component {
                     <p>{list.name} (doing)</p>
                     <ItemsContainer items={list.items.filter(item => item.status === "doing")}/>
                 </div>
+                <div className="list done" id={list.id}>
+                    <p>{list.name} (done)</p>
+                    <ItemsContainer items={list.items.filter(item => item.status === "done")} />
+                </div>
             </main>
         )
 

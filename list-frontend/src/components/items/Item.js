@@ -2,24 +2,36 @@ import React from 'react';
 
 const Item = ({item}) => {
 
-    if(item.status === "to_do") {
-        return (
-            <li>
-                {item.name}
-                <button className="delete" type="submit">Delete</button>
-                <button className="doing">Doing</button>
-            </li>
-        )   
-    }
-    else {
-        if(item.status === "doing") {
+    switch (item.status) {
+
+        case "to_do":
+            return (
+                <li>
+                    {item.name}
+                    <button className="delete" type="submit">Delete</button>
+                    <button className="doing">Doing</button>
+                </li>
+            )
+
+        case "doing":
             return (
                 <li>
                     {item.name}
                     <button className="done">Done</button>
                 </li>
             )
-        }
+
+        case "done":
+            return (
+                <li>
+                    {item.name}
+                    <button className="delete">Delete</button>
+                </li>
+            )
+
+        default :
+            return null
+
     }
 
 }
