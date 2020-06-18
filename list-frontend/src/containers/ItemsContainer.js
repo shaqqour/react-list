@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
-import ItemInput from '../components/items/ItemInput';
 import Items from '../components/items/Items';
 
 class ItemsContainer extends Component {
 
     render() {
-        const list = this.props.list
+        const items = this.props.items
         return(
             <div>
-                <ItemInput />
-                <Items/>
+                <Items items={items} />
             </div>
         )
     }
