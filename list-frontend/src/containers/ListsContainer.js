@@ -9,8 +9,8 @@ class ListsContainer extends Component {
     render() {
         return (
             <div>
-                <ListInput/>
-                <Lists lists = {this.props.lists.lists} />
+                <ListInput addList={this.props.addList} />
+                <Lists lists = {this.props.lists} />
             </div>
         )
     }
@@ -23,14 +23,14 @@ class ListsContainer extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        lists: state.lists
+        lists: state.lists.lists
     }
 }
 
 const mapDispatchToProps = (dispatch) => {
     return {
         fetchLists: () => dispatch(fetchLists()),
-        addList: list => dispatch(addList(list))
+        addList: listName => dispatch(addList(listName))
     }
 }
 

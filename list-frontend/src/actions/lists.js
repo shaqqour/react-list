@@ -7,9 +7,9 @@ export const fetchLists = () => {
     }
 }
 
-export const addList = (list) => {
+export const addList = (listName) => {
     return {
         type: 'ADD_LIST',
-        list
+        listName
     }
 }

@@ -1,3 +1,5 @@
+import uuid from 'uuid';
+
 function listsReducer(state = { lists: [], loading: false }, action) {
     switch (action.type) {
         case "LOADING_LISTS":
@@ -13,7 +15,8 @@ function listsReducer(state = { lists: [], loading: false }, action) {
                 loading: false
             }
         case "ADD_LIST":
-            return [ ...state, action.list ]
+            const list = {id: uuid(), name: action.listName, items:[]}
+            return { ...state, lists:[...state.lists, list] }
         default:
             return state
     }
