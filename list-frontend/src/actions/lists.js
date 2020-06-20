@@ -24,7 +24,7 @@ export const addList = (listName) => {
         body: JSON.stringify(formData)
     };
     return (dispatch) => {
-        dispatch({ type: "UPLOADING_LIST" })
+        dispatch({ type: "LOADING_LISTS" })
         fetch(LISTS_URL, configObj)
         .then(response => response.json())
         .then(jsonObject => {
