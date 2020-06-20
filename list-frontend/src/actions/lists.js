@@ -33,3 +33,9 @@ export const addList = (listName) => {
 
     }
 }
+
+export const deleteList = (listId) => {
+    let configObj = { method: "Delete" };
+    fetch(LISTS_URL + "/" + listId, configObj)
+    return { type: "DELETE_LIST", listId }
+}

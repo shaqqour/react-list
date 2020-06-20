@@ -4,6 +4,10 @@ import ItemInput from '../items/ItemInput';
 
 class List extends Component {
 
+    handleOnClick = (event) => {
+        this.props.deleteList(this.props.list.id)
+    }
+
     render() {
 
         const list = this.props.list;
@@ -11,7 +15,7 @@ class List extends Component {
         return (
             <main>
                 <div className="list" id={list.id}>
-                    <button className="delete">Delete List</button>
+                    <button className="delete" onClick={this.handleOnClick}>Delete List</button>
                     <p>{list.name} (to do)</p>
                     <ItemInput />
                     <ItemsContainer items={list.items.filter(item => item.status === "to_do")}/>

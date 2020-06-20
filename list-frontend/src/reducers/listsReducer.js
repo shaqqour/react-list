@@ -14,6 +14,9 @@ function listsReducer(state = { lists: [], loading: false }, action) {
             }
         case "ADD_LIST":
             return { ...state, lists:[...state.lists, action.list] }
+        case "DELETE_LIST":
+            const lists = state.lists.filter(list => list.id !== action.listId)
+            return { ...state, lists: lists }
         default:
             return state
     }

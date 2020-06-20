@@ -16,6 +16,9 @@ class ListInput extends Component {
     handleSubmit = (event) => {
         event.preventDefault();
         this.props.addList(this.state.name)
+        this.setState({
+            name: ""
+        })
     }
 
     render() {
