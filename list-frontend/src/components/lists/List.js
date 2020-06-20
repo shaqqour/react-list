@@ -18,15 +18,15 @@ class List extends Component {
                     <button className="delete" onClick={this.handleOnClick}>Delete List</button>
                     <p>{list.name} (to do)</p>
                     <ItemInput list={list}/>
-                    <ItemsContainer items={list.items.filter(item => item.status === "to_do")}/>
+                    <ItemsContainer listId={list.id} status="to_do"/>
                 </div>
                 <div className="list doing" id={list.id}>
                     <p>{list.name} (doing)</p>
-                    <ItemsContainer items={list.items.filter(item => item.status === "doing")}/>
+                    <ItemsContainer listId={list.id} status="doing"/>
                 </div>
                 <div className="list done" id={list.id}>
                     <p>{list.name} (done)</p>
-                    <ItemsContainer items={list.items.filter(item => item.status === "done")} />
+                    <ItemsContainer listId={list.id} status="done"/>
                 </div>
             </main>
         )
