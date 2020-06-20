@@ -17,7 +17,7 @@ class List extends Component {
                 <div className="list" id={list.id}>
                     <button className="delete" onClick={this.handleOnClick}>Delete List</button>
                     <p>{list.name} (to do)</p>
-                    <ItemInput />
+                    <ItemInput list={list}/>
                     <ItemsContainer items={list.items.filter(item => item.status === "to_do")}/>
                 </div>
                 <div className="list doing" id={list.id}>

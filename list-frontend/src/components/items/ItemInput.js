@@ -4,10 +4,10 @@ class ItemInput extends Component {
 
     state ={
         name: "",
-        status: "",
+        status: "to_do",
         priority: null,
         dueDate: null,
-        listId: null
+        listId: this.props.list.id
     }
 
     handleChange = (event) => {
@@ -24,7 +24,6 @@ class ItemInput extends Component {
     }
 
     render() {
-        const list = this.props.list
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>

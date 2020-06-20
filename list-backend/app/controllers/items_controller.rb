@@ -1,5 +1,10 @@
 class ItemsController < ApplicationController
 
+    def index
+        items = Item.all
+        render json: ItemSerializer.new(items)
+    end
+
     def create
         list = List.find_by(id: params[:list_id])
         item = list.items.create(item_params)
