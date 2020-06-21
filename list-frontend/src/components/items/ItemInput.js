@@ -6,8 +6,8 @@ class ItemInput extends Component {
         name: "",
         status: "to_do",
         priority: null,
-        dueDate: null,
-        listId: this.props.list.id
+        due_date: null,
+        list_id: this.props.list.id
     }
 
     handleChange = (event) => {
