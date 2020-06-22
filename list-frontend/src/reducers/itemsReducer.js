@@ -16,7 +16,7 @@ function itemsReducer(state = { items: [], loading: false }, action) {
         case "ADD_ITEM":
             return { ...state, items: [...state.items, action.item] }
         case "DELETE_ITEM":
-            items = state.items.filter(item => parseInt(item.id) !== action.itemId)
+            items = state.items.filter(item => item.id !== action.itemId)
             return { ...state, items: items }
         case "CHANGE_TO_DOING":
             items = state.items.map(item => {
@@ -25,7 +25,15 @@ function itemsReducer(state = { items: [], loading: false }, action) {
                 }
                 return item
             })
-            return {...state, items: items }
+            return { ...state, items: items }
+        case "CHANGE_TO_DONE":
+            items = state.items.map(item => {
+                if (item.id === action.itemId) {
+                    item.status = "done"
+                }
+                return item
+            })
+            return { ...state, items: items }
         default:
             return state
     }
