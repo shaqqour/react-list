@@ -2,7 +2,7 @@ class ItemsController < ApplicationController
 
     def index
         items = Item.all
-        render json: ItemSerializer.new(items)
+        render json: items
     end
 
     def create

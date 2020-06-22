@@ -10,7 +10,7 @@ class ItemsContainer extends Component {
     }
 
     render() {
-        const items = this.props.items.filter(item => item.attributes.list_id === this.props.listId && item.attributes.status === this.props.status)
+        const items = this.props.items.filter(item => item.list_id === this.props.listId && item.status === this.props.status)
 
         return(
             <div>

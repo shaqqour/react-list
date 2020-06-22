@@ -3,6 +3,7 @@ import ListInput from "../components/lists/ListInput"
 import { connect } from "react-redux"
 import Lists from "../components/lists/Lists"
 import { addList, fetchLists, deleteList } from "../actions/lists"
+import { addItem } from "../actions/items"
 
 class ListsContainer extends Component {
 
@@ -10,7 +11,7 @@ class ListsContainer extends Component {
         return (
             <div>
                 <ListInput addList={this.props.addList} />
-                <Lists lists={this.props.lists} deleteList={this.props.deleteList}/>
+                <Lists lists={this.props.lists} deleteList={this.props.deleteList} addItem={this.props.addItem}/>
             </div>
         )
     }
@@ -31,7 +32,8 @@ const mapDispatchToProps = (dispatch) => {
     return {
         fetchLists: () => dispatch(fetchLists()),
         addList: listName => dispatch(addList(listName)),
-        deleteList: listId => dispatch(deleteList(listId))
+        deleteList: listId => dispatch(deleteList(listId)),
+        addItem: item => dispatch(addItem(item))
     }
 }
 

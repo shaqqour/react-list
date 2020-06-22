@@ -5,7 +5,7 @@ const Items = ({items}) => {
 
     return (
         <ul>
-            {items.map(item => <Item key={item.id} item={item.attributes} />)}
+            {items.map(item => <Item key={item.id} item={item} />)}
         </ul>
     )
 

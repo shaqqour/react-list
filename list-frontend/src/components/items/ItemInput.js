@@ -18,6 +18,7 @@ class ItemInput extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault();
+        this.props.addItem(this.state)
         this.setState({
             name: ""
         })

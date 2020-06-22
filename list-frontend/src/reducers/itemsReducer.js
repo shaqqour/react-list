@@ -12,6 +12,8 @@ function itemsReducer(state = { items: [], loading: false }, action) {
                 items: action.items,
                 loading: false
             }
+        case "ADD_ITEM":
+            return { ...state, items: [...state.items, action.item] }
         default:
             return state
     }

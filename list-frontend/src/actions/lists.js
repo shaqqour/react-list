@@ -1,6 +1,5 @@
 const BASE_URL = "http://localhost:3000";
 const LISTS_URL = `${BASE_URL}/lists`;
-const ITEMS_URL = `${BASE_URL}/items`;
 
 export const fetchLists = () => {
     return (dispatch) => {
@@ -30,7 +29,6 @@ export const addList = (listName) => {
         .then(jsonObject => {
             dispatch({ type: 'ADD_LIST', list: jsonObject.data.attributes })
         });
-
     }
 }
 
