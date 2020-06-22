@@ -25,7 +25,7 @@ const Item = ({item, deleteItem, changeToDoing, changeToDone}) => {
             return (
                 <li>
                     {item.name}
-                    <button className="delete">Delete</button>
+                    <button className="delete" onClick={() => deleteItem(item.id)}>Delete</button>
                 </li>
             )
 
