@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Items from '../components/items/Items';
-import { fetchItems, deleteItem } from '../actions/items';
+import { fetchItems, deleteItem, changeToDoing } from '../actions/items';
 import { connect } from 'react-redux';
 
 class ItemsContainer extends Component {
@@ -14,7 +14,7 @@ class ItemsContainer extends Component {
 
         return(
             <div>
-                <Items items={items} deleteItem={this.props.deleteItem}/>
+                <Items items={items} deleteItem={this.props.deleteItem} changeToDoing={this.props.changeToDoing}/>
             </div>
         )
     }
@@ -30,7 +30,8 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         fetchItems: () => dispatch(fetchItems()),
-        deleteItem: (itemId) => dispatch(deleteItem(itemId))
+        deleteItem: (itemId) => dispatch(deleteItem(itemId)),
+        changeToDoing: (itemId) => dispatch(changeToDoing(itemId))
     }
 }
 

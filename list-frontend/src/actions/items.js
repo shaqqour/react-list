@@ -41,3 +41,19 @@ export const deleteItem = (itemId) => {
     fetch(ITEMS_URL + "/" + itemId, configObj)
     return { type: "DELETE_ITEM", itemId }
 }
+
+export const changeToDoing = (itemId) => {
+    let formData = {
+        "status": "doing",
+    };
+    let configObj = {
+        method: "PATCH",
+        headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+        },
+        body: JSON.stringify(formData)
+    };
+    fetch(ITEMS_URL + "/" + itemId, configObj)
+    return { type: "CHANGE_TO_DOING", itemId}
+}

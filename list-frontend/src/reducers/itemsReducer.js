@@ -1,4 +1,5 @@
 function itemsReducer(state = { items: [], loading: false }, action) {
+    let items;
     switch (action.type) {
         case "LOADING_ITEMS":
             return {
@@ -15,8 +16,16 @@ function itemsReducer(state = { items: [], loading: false }, action) {
         case "ADD_ITEM":
             return { ...state, items: [...state.items, action.item] }
         case "DELETE_ITEM":
-            const items = state.items.filter(item => parseInt(item.id) !== action.itemId)
+            items = state.items.filter(item => parseInt(item.id) !== action.itemId)
             return { ...state, items: items }
+        case "CHANGE_TO_DOING":
+            items = state.items.map(item => {
+                if(item.id === action.itemId) {
+                    item.status = "doing"
+                }
+                return item
+            })
+            return {...state, items: items }
         default:
             return state
     }
