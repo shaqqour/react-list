@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Item = ({item}) => {
+const Item = ({item, deleteItem}) => {
 
     switch (item.status) {
 
@@ -8,7 +8,7 @@ const Item = ({item}) => {
             return (
                 <li>
                     {item.name}
-                    <button className="delete" type="submit">Delete</button>
+                    <button className="delete" type="submit" onClick={ () => deleteItem(item.id)}>Delete</button>
                     <button className="doing">Doing</button>
                 </li>
             )

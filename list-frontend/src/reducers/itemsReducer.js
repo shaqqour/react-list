@@ -14,6 +14,9 @@ function itemsReducer(state = { items: [], loading: false }, action) {
             }
         case "ADD_ITEM":
             return { ...state, items: [...state.items, action.item] }
+        case "DELETE_ITEM":
+            const items = state.items.filter(item => parseInt(item.id) !== action.itemId)
+            return { ...state, items: items }
         default:
             return state
     }

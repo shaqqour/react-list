@@ -35,3 +35,9 @@ export const addItem = (item) => {
         });
     }
 }
+
+export const deleteItem = (itemId) => {
+    let configObj = { method: "Delete" };
+    fetch(ITEMS_URL + "/" + itemId, configObj)
+    return { type: "DELETE_ITEM", itemId }
+}
