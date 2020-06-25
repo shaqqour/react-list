@@ -11,7 +11,11 @@ class ListsContainer extends Component {
         return (
             <div>
                 <ListInput addList={this.props.addList} />
-                <Lists lists={this.props.lists} deleteList={this.props.deleteList} addItem={this.props.addItem}/>
+                <Lists
+                    lists={this.props.lists}
+                    deleteList={this.props.deleteList}
+                    addItem={this.props.addItem}
+                />
             </div>
         )
     }

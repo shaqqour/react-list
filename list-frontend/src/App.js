@@ -1,15 +1,18 @@
 import React from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './styles.css'
 import ListsContainer from './containers/ListsContainer';
+import Home from './components/Home';
 
 function App() {
   return (
-    <div className="App">
+    <Router>
       <header>
         <h2>To-Do, Doing, Done Lists</h2>
       </header>
-      <ListsContainer />
-    </div>
+      <Route exact path="/" render={() => <Home />} />
+      <Route exact path="/lists" render={(routerProps) => <ListsContainer {...routerProps}/>} />
+    </Router>
   );
 }
 
