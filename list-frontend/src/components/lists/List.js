@@ -5,7 +5,7 @@ import ItemInput from '../items/ItemInput';
 class List extends Component {
 
     state ={
-        showDetails: false
+        showDetails: true
     }
 
     handleDelete = (event) => {
@@ -15,10 +15,10 @@ class List extends Component {
         this.setState({
             showDetails: !this.state.showDetails
         })
-        if (event.target.innerHTML === "Details") {
-            event.target.innerHTML = "Hide" 
+        if (event.target.innerHTML === "Consolidate") {
+            event.target.innerHTML = "Expand" 
         }else {
-            event.target.innerHTML = "Details"
+            event.target.innerHTML = "Consolidate"
         }
     }
 
@@ -30,7 +30,7 @@ class List extends Component {
             <main>
                 <div className="list" id={list.id}>
                     <button className="delete" onClick={this.handleDelete}>Delete List</button>
-                    <button className="details" onClick={this.handleDetails}>Details</button>
+                    <button className="details" onClick={this.handleDetails}>Consolidate</button>
                     <p>{list.name} (to do)</p>
                     <ItemInput list={list} addItem={this.props.addItem}/>
                     <ItemsContainer listId={list.id} status={this.state.showDetails ? "to_do" : "all"} />

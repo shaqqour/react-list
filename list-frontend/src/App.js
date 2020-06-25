@@ -10,8 +10,8 @@ function App() {
       <header>
         <h2>To-Do, Doing, Done Lists</h2>
       </header>
-      <Route exact path="/" render={() => <Home />} />
-      <Route exact path="/lists" render={(routerProps) => <ListsContainer {...routerProps}/>} />
+      <Route path="/" render={() => <Home />} />
+      <Route path="/lists" render={(routerProps) => <ListsContainer {...routerProps}/>} />
     </Router>
   );
 }
