@@ -4,17 +4,22 @@ import { connect } from "react-redux"
 import Lists from "../components/lists/Lists"
 import { addList, fetchLists, deleteList } from "../actions/lists"
 import { addItem } from "../actions/items"
+import { Route } from "react-router-dom"
 
 class ListsContainer extends Component {
 
     render() {
+
+        const lists = this.props.lists
+
         return (
             <div>
                 <ListInput addList={this.props.addList} />
-                <Lists
-                    lists={this.props.lists}
-                    deleteList={this.props.deleteList}
-                    addItem={this.props.addItem}
+                <Route exact path={this.props.match.url} render={ () => <Lists
+                                                                            lists={lists}
+                                                                            deleteList={this.props.deleteList}
+                                                                            addItem={this.props.addItem}
+                                                                        />}
                 />
             </div>
         )
