@@ -12,7 +12,7 @@ function App() {
         <h2>To-Do, Doing, Done Lists</h2>
       </header>
       <Route path="/" render={() => <Home />} />
-      <Route path="/lists" render={(routerProps) => <ListsContainer {...routerProps}/>} />
+      <Route exact path="/lists" render={(routerProps) => <ListsContainer {...routerProps}/>} />
       <Route exact path="/search" render={(routerProps) => <SearchContainer {...routerProps} />} />
     </Router>
   );

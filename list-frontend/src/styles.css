@@ -104,7 +104,7 @@ body {
   }
   
   span {
-    margin-top:10px; 
+    margin-top:20px; 
     margin-bottom: 30px;
     padding-left:10px; 
     display:inline-block;
@@ -115,4 +115,23 @@ body {
     color: #fff;
     background-color: rgb(54, 167, 219);
     border-radius: 10px;
+  }
+
+  .topnav {
+    background-color: rgb(33, 168, 51);
+    overflow: hidden;
+  }
+  
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
   }

@@ -15,6 +15,7 @@ class SearchInput extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault();
+        this.props.searchLists(this.state.term)
         this.setState({
             term: ""
         })

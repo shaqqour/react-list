@@ -5,12 +5,9 @@ import { addList, fetchLists, deleteList } from "../actions/lists"
 import { addItem } from "../actions/items"
 import { Route } from "react-router-dom"
 import SearchInput from "../components/search/SearchInput"
+import { searchLists } from "../actions/search"
 
 class SearchContainer extends Component {
-
-    state = {
-        term: ""
-    }
 
     render() {
 
@@ -18,8 +15,7 @@ class SearchContainer extends Component {
 
         return (
             <div>
-                <SearchInput />
-                
+                <SearchInput searchLists={this.props.searchLists}/>
                 <Route exact path={this.props.match.url} render={() => <Lists
                                                                             lists={lists}
                                                                             deleteList={this.props.deleteList}
@@ -37,8 +33,9 @@ class SearchContainer extends Component {
 }
 
 const mapStateToProps = (state) => {
+    const lists = state.lists.searchedLists.filter(list => state.lists.lists.includes(list))
     return {
-        lists: state.lists.lists
+        lists: lists
     }
 }
 
@@ -47,7 +44,8 @@ const mapDispatchToProps = (dispatch) => {
         fetchLists: () => dispatch(fetchLists()),
         addList: listName => dispatch(addList(listName)),
         deleteList: listId => dispatch(deleteList(listId)),
-        addItem: item => dispatch(addItem(item))
+        addItem: item => dispatch(addItem(item)),
+        searchLists: term => dispatch(searchLists(term))
     }
 }
 

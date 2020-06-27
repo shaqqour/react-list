@@ -1,4 +1,5 @@
-function listsReducer(state = { lists: [], loading: false }, action) {
+function listsReducer(state = { lists: [], loading: false, searchedLists: [] }, action) {
+    let lists;
     switch (action.type) {
         case "LOADING_LISTS":
             return {
@@ -15,11 +16,19 @@ function listsReducer(state = { lists: [], loading: false }, action) {
         case "ADD_LIST":
             return { ...state, lists: [...state.lists, action.list] }
         case "DELETE_LIST":
-            const lists = state.lists.filter(list => parseInt(list.id) !== action.listId)
+            lists = state.lists.filter(list => parseInt(list.id) !== action.listId)
             return { ...state, lists: lists }
+        case "SEARCH_LISTS":
+            lists = filter(state.lists, action.term)
+            return { ...state, searchedLists: lists }
         default:
             return state
     }
+}
+
+function filter(lists, term) {
+    term = term.toLocaleLowerCase()
+    return lists.filter(list => list.attributes.name.toLocaleLowerCase().includes(term))
 }
 
 export default listsReducer;
