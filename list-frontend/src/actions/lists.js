@@ -28,7 +28,6 @@ export const addList = (listName) => {
         fetch(LISTS_URL, configObj)
         .then(response => response.json())
         .then(jsonObject => {
-            console.log(jsonObject)
             dispatch({ type: 'ADD_LIST', list: jsonObject.data.attributes })
         });
     }
