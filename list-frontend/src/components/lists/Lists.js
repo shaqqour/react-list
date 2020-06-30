@@ -1,7 +1,7 @@
 import React from 'react';
 import List from './List';
 
-const Lists = ({lists, deleteList, addItem}) => {
+const Lists = ({lists, deleteList, addItem, toggleStarred}) => {
 
     return (
         <div>
@@ -11,6 +11,7 @@ const Lists = ({lists, deleteList, addItem}) => {
                                     list={list.attributes || list}
                                     deleteList={deleteList}
                                     addItem={addItem}
+                                    toggleStarred={toggleStarred}
                                     />)
             }
         </div>

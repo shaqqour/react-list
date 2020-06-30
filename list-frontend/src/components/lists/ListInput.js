@@ -3,7 +3,8 @@ import React, { Component } from "react";
 class ListInput extends Component {
 
     state = {
-        name: ""
+        name: "",
+        starred: false
     }
 
     handleChange = (event) => {
@@ -17,7 +18,8 @@ class ListInput extends Component {
         event.preventDefault();
         this.props.addList(this.state.name)
         this.setState({
-            name: ""
+            name: "",
+            starred: false
         })
     }
 

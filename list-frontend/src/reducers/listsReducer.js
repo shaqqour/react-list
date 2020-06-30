@@ -21,6 +21,14 @@ function listsReducer(state = { lists: [], loading: false, searchedLists: [] }, 
         case "SEARCH_LISTS":
             lists = filter(state.lists, action.term)
             return { ...state, searchedLists: lists }
+        case "TOGGLE_STARRED":
+            lists = state.lists.map(list => {
+                if (list.id === action.listId) {
+                    list.starred = action.starred
+                }
+                return list
+            })
+            return { ...state, lists: lists }
         default:
             return state
     }

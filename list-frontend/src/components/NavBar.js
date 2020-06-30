@@ -5,7 +5,6 @@ const NavBar = () => {
 
     return (
         <div className="topnav">
-            <Link className="active" to={'/'}>Home</Link>
             <Link to={'/lists'}>Lists</Link>
             <Link to={'/search'}>Search</Link>
         </div>

@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import { connect } from "react-redux"
 import Lists from "../components/lists/Lists"
-import { addList, fetchLists, deleteList } from "../actions/lists"
+import { addList, fetchLists, deleteList, toggleStarred } from "../actions/lists"
 import { addItem } from "../actions/items"
 import { Route } from "react-router-dom"
 import SearchInput from "../components/search/SearchInput"
@@ -20,6 +20,7 @@ class SearchContainer extends Component {
                                                                             lists={lists}
                                                                             deleteList={this.props.deleteList}
                                                                             addItem={this.props.addItem}
+                                                                            toggleStarred={this.props.toggleStarred}
                                                                         />}
                 />
             </div>
@@ -45,7 +46,8 @@ const mapDispatchToProps = (dispatch) => {
         addList: listName => dispatch(addList(listName)),
         deleteList: listId => dispatch(deleteList(listId)),
         addItem: item => dispatch(addItem(item)),
-        searchLists: term => dispatch(searchLists(term))
+        searchLists: term => dispatch(searchLists(term)),
+        toggleStarred: (listId, starred) => dispatch(toggleStarred(listId, starred))
     }
 }
 
