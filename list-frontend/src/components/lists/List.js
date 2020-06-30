@@ -29,7 +29,7 @@ class List extends Component {
         return (
             <main>
                 <div className="list" id={list.id}>
-                    <button className="delete" onClick={this.handleDelete}>Delete List</button>
+                    <button className="deletelist" onClick={this.handleDelete}>Delete List</button>
                     <button className="details" onClick={this.handleDetails}>Consolidate</button>
                     <p>{list.name} (to do)</p>
                     <ItemInput list={list} addItem={this.props.addItem}/>

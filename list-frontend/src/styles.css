@@ -79,6 +79,16 @@ body {
     background-color: #E1332D;
   }
 
+  button.deletelist {
+    float: left;
+    background-color: #E1332D;
+  }
+
+  button.details {
+    float: right;
+    background-color: rgb(54, 167, 219);
+  }
+
   button.doing {
     float: right;
     color: rgb(80, 78, 78);
