@@ -5,6 +5,7 @@ Easy simple way to orgenize your to-do lists.
 
 ## Introduction
 To-Do, Doing, Done is a Single Page Application(SPA). It is written in Javascript, using React and Redux libraries. It is also using Ruby-Rails as a backend, and has a sqlite3 DB. This application was created to help people who are struggling to orgenize their To-Do lists. It is an easy simple way to create lists and add tasks and items to each one.
+
 It is an open web application where users can create "To Do Lists" whether it is Personal, Work, or anything else. They can add tasks or items to the "to-do list." Each task/item has three stages: to-do, doing and done. The user can organize them by moving indiviual task/item from the to-do stage to the doing and then to the done stage. In addition, users can star individule lists and click the Starred tap to view only those lists. A search option is provided to search for a specific list if you start having many lists and get lost between them.
 
 ## Getting Started
