@@ -13,9 +13,13 @@ Fork this repo and clone it to your local machine. Run rails server on the back-
 
 ### Technologies
 [Ruby on Rails v6](https://rubyonrails.org/)
+
 [SQLite3](https://www.sqlite.org/index.html)
+
 [Javascript ES6](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+
 [React JS Library](https://reactjs.org/)
+
 [REDUX State Container](https://redux.js.org/)
 
 ruby '2.5.1' and the gem 'rails', '~> 6.0.2', '>= 6.0.2.1' as the backend.
