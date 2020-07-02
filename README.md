@@ -9,7 +9,7 @@ It is an open web application where users can create "To Do Lists" whether it is
 
 ## Getting Started
 
-Fork this repo and clone it to your local machine. Run rails server on the back-end folder of this project and then open "index.html" file in your browser and start creating list and add tasks to them.
+Fork this repo and clone it to your local machine.
 
 ### Technologies
 [Ruby on Rails v6](https://rubyonrails.org/)
